@@ -3,7 +3,7 @@
 ## 运行方法（Easy Start）
 
 * `node ./NodeServer/server.js`
-* `python3.7 ./PythonClient/vtuber.py --gpu -1`
+* `python3.7 ./PythonClient/vtuber_usb_camera.py --gpu -1`
 
 
 ## 人脸检测 （Face Detection）
@@ -16,10 +16,10 @@
 
 
 ## 特征点检测（Facial Landmarks Tracking）
-- Using dlib for facial features tracking
-- [Download Model](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
-- Algorithm from [CVPR 2014](http://www.csc.kth.se/~vahidk/papers/KazemiCVPR14.pdf)
-- Training set is based on i-bug 300-W datasets. It's annotation is shown below:<br><br>
+* [Download Landmarks Model](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
+* Using dlib for facial features tracking
+* Algorithm from [CVPR 2014](http://www.csc.kth.se/~vahidk/papers/KazemiCVPR14.pdf)
+* Training set is based on i-bug 300-W datasets. It's annotation is shown below:<br><br>
 ![ibug](https://cloud.githubusercontent.com/assets/16308037/24229391/1910e9cc-0fb4-11e7-987b-0fecce2c829e.JPG)
 
 ## 表情识别（Emotion Recognition）
