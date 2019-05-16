@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <title>OpenVtuber</title>
     <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/css/addClass.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/live2d/css/live2d.css" />
 
 </head>
@@ -86,7 +84,7 @@
             };
 
             function drawResult(result) {
-                // console.log('Roll:' + result.X, 'Pitch:' + result.Y, 'Yaw:' + result.Z);
+                console.log('Roll:' + result.X, 'Pitch:' + result.Y, 'Yaw:' + result.Z);
                 var landmarks_shape = result.shape;
 
                 mouth_in = landmarks_shape[67][1] - landmarks_shape[63][1];
@@ -103,8 +101,8 @@
                 m_left_eye = avg_eye > 0.54 ? 0.55 : (avg_eye < 0.34 ? 0.1 : avg_eye);
                 m_right_eye = avg_eye > 0.54 ? 0.55 : (avg_eye < 0.34 ? 0.1 : avg_eye);
 
-                if (result.Z > -5 && result.Z < 5) m_n = 0
-                else m_n = result.Z / 5;
+                if (result.Z > -3 && result.Z < 3) m_n = 0
+                else m_n = result.Z / 3;
 
                 // console.log('LeftEye:' + m_left_eye,
                 //     '\nRightEye:' + m_right_eye,
