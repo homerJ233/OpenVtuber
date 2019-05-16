@@ -3,13 +3,21 @@
 ## 运行方法（Easy Start）
 
 * `node ./NodeServer/server.js`
+* `make -C ./PythonClient/rcnn/`
 * `python3.7 ./PythonClient/vtuber_usb_camera.py --gpu -1`
 
 
 ## 人脸检测 （Face Detection）
 * [MTCNN (Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks)](https://kpzhang93.github.io/MTCNN_face_detection_alignment/)
 * [MTCNN (mxnet version)](https://github.com/deepinsight/insightface)
+* [RetinaFace: Single-stage Dense Face Localisation in the Wild](https://arxiv.org/abs/1905.00641)
+* [RetinaFace (mxnet version)](https://github.com/deepinsight/insightface/tree/master/RetinaFace)
 
+RetinaFace is a practical single-stage [SOTA](http://shuoyang1213.me/WIDERFACE/WiderFace_Results.html) face detector which is initially described in [arXiv technical report](https://arxiv.org/abs/1905.00641)
+
+![demoimg1](https://github.com/deepinsight/insightface/blob/master/resources/11513D05.jpg)
+
+![demoimg2](https://github.com/deepinsight/insightface/blob/master/resources/widerfacevaltest.png)
 
 ## 头部姿态估计（Head Pose Estimation）
 * [head-pose-estimation](https://github.com/lincolnhard/head-pose-estimation)
@@ -39,7 +47,7 @@
 
 ## FAQ
 
-* Why not RetinaFace ?
+* Why use RetinaFace ?
 
     | Methods | LFW | CFP-FP | AgeDB-30
     | --------|-----|--------|---------
@@ -62,5 +70,12 @@
     doi={10.1109/LSP.2016.2603342}, 
     ISSN={1070-9908}, 
     month={Oct}
+}
+  
+@inproceedings{deng2019retinaface,
+title={RetinaFace: Single-stage Dense Face Localisation in the Wild},
+author={Deng, Jiankang and Guo, Jia and Yuxiang, Zhou and Jinke Yu and Irene Kotsia and Zafeiriou, Stefanos},
+booktitle={arxiv},
+year={2019}
 }
 ```
